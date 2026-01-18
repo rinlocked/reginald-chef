@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reginald // Kitchen Assistant</title>
+	<!-- Ensure this filename matches your CSS file exactly -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Auth0 Login Overlay (Shown first) -->
+	<div id="auth-overlay">
+		<div id="login-box">
+			<h1>REGINALD</h1>
+			<p>SYSTEM LOCKED. CHEF IDENTIFICATION REQUIRED.</p>
+			<button id="btn-login" class="mustard">LOG IN / REGISTER</button>
+		</div>
+	</div>
+
+	<!-- Main App (Hidden until logged in) -->
+	<div id="kitchen-box" style="display: none;">
+		<header>
+			<div class="header-left">
+				<img src="bi.png" id="reg-icon" alt="Icon">
+				<h1>REGINALD</h1>
+			</div>
+			<div class="header-right">
+				<button id="btn-logout">LOGOUT</button>
+				<div id="status-tag">READY</div>
+			</div>
+		</header>
+
+		<div id="display-screen">
+			<p id="output-text">System standing by. Click the Mustard button to speak, Chef.</p>
+		</div>
+
+		<div class="controls">
+			<button id="mic-btn" class="mustard">START LISTENING</button>
+			<button id="stop-btn" class="ketchup">STOP VOICE</button>
+		</div>
+	</div>
+
+	<!-- Auth0 SDK -->
+	<script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
